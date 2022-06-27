@@ -44,7 +44,6 @@ resource "aws_autoscaling_group" "custom-group-autoscaling" {
   min_size                  = 1
   health_check_grace_period = 60
   health_check_type         = "EC2"
-  #desired_capacity          = 4
   force_delete         = true
   launch_configuration = aws_launch_configuration.custom-launch-config.name
   vpc_zone_identifier  = ["subnet-02a7ae88655bda51d"]
